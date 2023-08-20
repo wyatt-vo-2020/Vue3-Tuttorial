@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<h1>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello World</h1>
+    <section id="contact">
+        <h1>Xin chao {{teamName}} and {{`${firstName} ${lastName}`}}</h1>
+        <button v-on:click="onChangeName">Change Name 1</button>
+        <button @click="onChangeName">Change Name 2</button>
+        <div class="modal">
+            <h1>Modal content</h1>
+        </div>
+    </section>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="main.js"></script>
+</body>
+</html>
