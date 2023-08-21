@@ -4,10 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=<h1>, initial-scale=1.0">
     <title>Document</title>
+    <style>
+    /* =========Test with Mouse Event */
+        .card{
+            width:180px;
+            height: 180px;
+            background-color: #dedede;
+            margin-bottom: 5px;
+        }
+    </style>
 </head>
 <body>
     <h1>Hello World</h1>
-    <section id="contact"></section>
+    <section id="contact">
+        <!-- Test with Mouse Event         -->
+        <div class="card" @mouseover="onLogEvent">Mouse Over</div>
+        <div class="card" @mouseleave="onLogEvent">Mouse Leave</div>
+        <div class="card" @dblclick="onLogEvent($event, 150, 100)">Double Click</div>
+        <div class="card" @mousemove="onMouseMoveEvent">Mouse Move {{`${x}-${y}`}}</div>
+        <div class="card"></div>
+
+    </section>
     <script src="https://unpkg.com/vue@next"></script>
     <script src="main.js"></script>
 </body>
