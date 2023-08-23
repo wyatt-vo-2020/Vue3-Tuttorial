@@ -14,9 +14,49 @@ const app = Vue.createApp({
         //     lastName: "Quy",
         //     isHello: false,
         //     isShowModel: false 
-        //========= Test with Mouse Event
-        x: 0,
-        y: 0,
+    //========= Test with Mouse Event
+        // x: 0,
+        // y: 0,
+    //========= Test with v-for
+            urlTesting:"gg.com",
+            products: [
+                {
+                    name: "A",
+                    price: 120.1,
+                    thumb: './assets/1.png',
+                    isCart: true
+                },
+                {
+                    name: "B",
+                    price: 124.1,
+                    thumb: './assets/2.png',
+                    isCart: true
+                },
+                {
+                    name: "C",
+                    price: 125.1,
+                    thumb: './assets/3.png',
+                    isCart: false
+                },
+                {
+                    name: "D",
+                    price: 125.1,
+                    thumb: './assets/4.png',
+                    isCart: false
+                },
+                {
+                    name: "E",
+                    price: 125.1,
+                    thumb: './assets/5.png',
+                    isCart: false
+                },
+                {
+                    name: "F",
+                    price: 125.1,
+                    thumb: './assets/6.png',
+                    isCart: false
+                },
+            ]
         };
     },
     methods: {
@@ -26,14 +66,16 @@ const app = Vue.createApp({
             this.lastName = "Wyatt",
             this.isShowModel = !this.isShowModel
         },
-        //========= Test with Mouse Event        
+    //========= Test with Mouse Event        
         onLogEvent(){
             console.log("Running Event");
         },
         onMouseMoveEvent(event){
             this.x = event.offsetX;
             this.y = event.offsetY;
-        }
+        },
+    //========= Test with Mouse Event        
+
     }
 });
 app.mount("#contact");
