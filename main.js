@@ -28,31 +28,31 @@ const app = Vue.createApp({
                 },
                 {
                     name: "B",
-                    price: 124.1,
+                    price: 150.1,
                     thumb: './assets/2.png',
                     isCart: true
                 },
                 {
                     name: "C",
-                    price: 125.1,
+                    price: 160.1,
                     thumb: './assets/3.png',
                     isCart: false
                 },
                 {
                     name: "D",
-                    price: 125.1,
+                    price: 175.1,
                     thumb: './assets/4.png',
                     isCart: false
                 },
                 {
                     name: "E",
-                    price: 125.1,
+                    price: 190.1,
                     thumb: './assets/5.png',
                     isCart: false
                 },
                 {
                     name: "F",
-                    price: 125.1,
+                    price: 200.1,
                     thumb: './assets/6.png',
                     isCart: false
                 },
@@ -74,8 +74,16 @@ const app = Vue.createApp({
             this.x = event.offsetX;
             this.y = event.offsetY;
         },
-    //========= Test with Mouse Event        
+    //========= Test with Mouse Event
+        onToggleCart(event, product){
+            product.isCart = !product.isCart;
+        }
 
-    }
+    },
+    computed: {
+        productsComputed(){
+            return this.products.filter((product)=> product.price > 160)
+        }
+    },
 });
 app.mount("#contact");

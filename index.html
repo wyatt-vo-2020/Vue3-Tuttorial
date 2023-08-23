@@ -39,7 +39,12 @@
             <div class="card" @mousemove="onMouseMoveEvent">Mouse Move {{`${x}-${y}`}}</div> -->
         <!-- Test with v-for -->
             <div class="card-products card-container">
-                <div class="card" v-for="product in products" :class="{ cart : product.isCart }">
+                <div 
+                    class="card" 
+                    v-for="product in productsComputed" 
+                    :class="{ cart : product.isCart }"
+                    @dblclick="onToggleCart($event, product)"
+                >
                     <img class="card-thumb" v-bind:src="product.thumb" />
                     <h1>{{product.name}}</h1>
                     <h1>{{product.price}}</h1>
